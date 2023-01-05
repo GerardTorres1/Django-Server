@@ -31,7 +31,6 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
-    "whitenoise.runserver_nostatic", # use whitenoise to serve static files
     "polls.apps.PollsConfig",
     'django.contrib.admin',
     'django.contrib.auth',
