@@ -31,14 +31,13 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
-    "polls.apps.PollsConfig",  # add this line for admit the polls app
+    "polls.apps.PollsConfig",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'whitenoise.runserver_nostatic',  # add this line for admit the whitenoise app
 ]
 
 MIDDLEWARE = [
@@ -49,10 +48,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # add this line for admit the whitenoise app
-    "django.middleware.security.SecurityMiddleware",
-    # add this line for admit the whitenoise app
-    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 ROOT_URLCONF = 'mysite.urls'
@@ -142,6 +137,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CSRF_TRUSTED_ORIGINS = [
     'https://djangos.up.railway.app'
 ]
-
-# add this line for admit the whitenoise app
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
